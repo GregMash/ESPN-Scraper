@@ -15,6 +15,8 @@ const ArticleSchema = new Schema({
         type: String,
         required: true
     },
+    summary: String,
+    image: String,
     // The note is an object with an id
     // Ref will link the ObjectId of each Article to the Note model
     // This way we can populate the article with each associated note

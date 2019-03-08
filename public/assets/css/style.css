@@ -1,0 +1,21 @@
+body {
+    width: 100%;
+    background: lightgray;
+}
+.jumbotron {
+    width: 100%;
+    background: rgb(241, 134, 134);
+    text-align: center;
+}
+
+.article {
+    background: rgb(241, 134, 134);
+    border: 3px solid black;
+    margin: 10%;
+    padding: 1%;
+}
+
+.saver {
+    float: right;
+    margin-right: 20%;
+}
