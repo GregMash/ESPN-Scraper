@@ -24,10 +24,30 @@ $(document).ready(() => {
         });
     };
 
+    // Creates a new note
+    function createNote() {
+        const articleId = $(this).attr("id");
+        const newNote = $("#note-text").val().trim();
+        $.ajax({
+            method: "POST",
+            url: `/articles/${articleId}`,
+            data: {newNote}
+        }).then(() => {
+            location.reload();
+        });
+    };
+
+    function displayNotes() {
+        const modal = $(".notes-modal");
+        modal.style.display = "block";
+    };
+
 
 
     //==================================== MAIN PROCESS ====================================
 
     $(document).on("click", ".saver", saveArticle);
     $(document).on("click", ".deleter", deleteArticle);
+    $(document).on("click", ".noter", displayNotes);
+
 });

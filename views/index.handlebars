@@ -1,8 +1,8 @@
 <div id="wrapper">
     <div class="jumbotron">
-        <h1>Super Scraper</h1>
-        <h2>Sports Edition</h2>
-        <h3>View, save, and add notes for sports articles</h2>
+        <h1>Super Mongo Scraper</h1>
+        <h2>The Sports Edition</h2>
+        <h3>View, save, and add custom notes for sports articles</h2>
             <form action="/scrape">
                 <button id="scrapeBtn">Scrape new articles</button>
             </form>
@@ -20,13 +20,42 @@
                 <img src="{{image}}" alt={{title}}>
             </div>
             <div class="card-footer">
-                <a href={{link}}>View Article</a>
-                <button class="saver" id={{_id}}>Save Article</button>
-                <button class="noter" id={{_id}}>View Notes</button>
+                <a class="btn btn-primary links" href={{link}} role="button">View Article</a>
+                <button class="btnInLine saver" id={{_id}}>Save Article</button>
+                <!-- Button trigger modal -->
+                <button type="button" id={{_id}} class="btnInLine noter" data-toggle="modal"
+                    data-target="#exampleModalCenter">
+                    View Notes
+                </button>
             </div>
         </div>
 
-        {{/each}}
-    </div>
-    <div class="notes"></div>
-</div>
+        <div class="notes">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-dark" id="exampleModalCenterTitle">{{title}}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Note:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>

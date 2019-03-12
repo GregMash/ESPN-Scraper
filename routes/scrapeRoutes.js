@@ -19,8 +19,12 @@ module.exports = (app) => {
                 const result = {};
                 // Add title, summary, image, and href of an article, save them as properties of the result object
                 result.title = $(element).children("div.article-list-item-image").children("a").attr("aria-label");
-                //result.summary = $(element).children("section").children("a").children("div").children("div").children("p").text()
-                result.link = $(element).children("div.article-list-item-image").children("a").attr("href");
+                // CBS sports has some articles of their own and some from outside sources. If statement below is a check to make sure the correct path is entered for each article
+                if($(element).children("div.article-list-item-image").children("a").attr("href").startsWith("h")) {
+                    result.link = $(element).children("div.article-list-item-image").children("a").attr("href");
+                } else if ($(element).children("div.article-list-item-image").children("a").attr("href").startsWith("/")){
+                    result.link = `http://www.cbssports.com/${$(element).children("div.article-list-item-image").children("a").attr("href")}`
+                }
                 result.image = $(element).children("div.article-list-item-image").children("a").children("div").children("figure").children("img").attr("data-lazy");
                 // Make sure there is a title and link returned
                 if (result.title && result.link) {
