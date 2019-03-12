@@ -37,10 +37,7 @@ $(document).ready(() => {
         });
     };
 
-    function displayNotes() {
-        const modal = $(".notes-modal");
-        modal.style.display = "block";
-    };
+    
 
 
 
@@ -49,5 +46,6 @@ $(document).ready(() => {
     $(document).on("click", ".saver", saveArticle);
     $(document).on("click", ".deleter", deleteArticle);
     $(document).on("click", ".noter", displayNotes);
+    $(document).on("click", "#note-saver", createNote);
 
 });
