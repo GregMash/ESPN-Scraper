@@ -26,8 +26,9 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/espnScraper"
 mongoose.connect(MONGODB_URI);
 
 // Require and use all routes
-require("./routes/exphbsRoutes")(app);
-require("./routes/espnScrapeRoutes")(app);
+require("./routes/scrapeRoutes")(app);
+require("./routes/ArticleRoutes")(app);
+require("./routes/notesRoutes")(app);
 
 // Listener
 app.listen(PORT, () => {

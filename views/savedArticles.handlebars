@@ -2,15 +2,13 @@
     <div class="jumbotron">
         <h1>Super Scraper</h1>
         <h2>Sports Edition</h2>
-        <h3>View, save, and add notes for sports articles</h2>
-            <form action="/scrape">
-                <button id="scrapeBtn">Scrape new articles</button>
-            </form>
-            <form action="/saved">
-                <button id="savedArticles">View saved articles</button>
+        <h3>Your saved articles</h2>
+            
+            <form action="/">
+                <button id="allArticles">View all articles</button>
             </form>
     </div>
-    <div class="articles">
+   <div class="articles">
         {{#each articles}}
         <div class="article">
             <div class="card-header">
@@ -21,12 +19,12 @@
             </div>
             <div class="card-footer">
                 <a href={{link}}>View Article</a>
-                <button class="saver" id={{_id}}>Save Article</button>
+                <button class="deleter" id={{_id}}>Delete Article</button>
                 <button class="noter" id={{_id}}>View Notes</button>
             </div>
         </div>
-
         {{/each}}
     </div>
-    <div class="notes"></div>
+        <div class="notes"></div>
+
 </div>

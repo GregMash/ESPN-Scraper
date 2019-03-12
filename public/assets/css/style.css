@@ -1,21 +1,26 @@
 body {
-    width: 100%;
-    background: lightgray;
+    background: rgb(195, 181, 204);
+    color: rgb(240, 235, 235);
 }
 .jumbotron {
-    width: 100%;
-    background: rgb(241, 134, 134);
+    background-image: url("/assets/images/background.png");
     text-align: center;
+    font-size: 50px;
 }
 
 .article {
-    background: rgb(241, 134, 134);
+    background: rgb(154, 133, 202);
     border: 3px solid black;
     margin: 10%;
-    padding: 1%;
+    padding: 2%;
 }
 
-.saver {
+.btnInLine {
     float: right;
-    margin-right: 20%;
+    margin-right: 1%;
+}
+
+button {
+    padding: 1%;
+    border: 1px solid black;
 }
