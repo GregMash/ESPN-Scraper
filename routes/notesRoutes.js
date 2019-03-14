@@ -17,6 +17,7 @@ module.exports = (app) => {
 
     // Route for saving or updating an Article's associated note
     app.post("/articles/:id", (req, res) => {
+        console.log(req.body);
         // Create a new note and pass req.body to the entry
         db.Note.create(req.body)
             .then((dbNote) => {

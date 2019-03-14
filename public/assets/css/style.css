@@ -1,10 +1,10 @@
 body {
-    background: rgb(195, 181, 204);
-    color: rgb(240, 235, 235);
+    background: rgb(37, 36, 36);
 }
 .jumbotron {
     background-image: url("/assets/images/background.png");
     text-align: center;
+    color: lightgray;
 }
 
 h1 {
@@ -20,71 +20,49 @@ h3 {
 }
 
 .article {
-    background: rgb(154, 133, 202);
-    border: 3px solid black;
+    background-color: rgb(178, 173, 189);
+    border: 3px solid white;
     margin: 3%;
     padding: 3% 2% 8% 2%;
     text-align: center;
-
 }
 
 img {
-    margin: 3% 0% 2% 0%;
     width: 85%;
+    border: 1px solid white;
+
 }
 
-.btnInLine {
+.btn-group {
     float: right;
+
+}
+
+.btn {
+    border: 3px solid white;
+
 }
 
 .links {
     float: left;
 }
 
-button {
-    margin: 1%;
-    padding: 1%;
-    border: 1px solid black;
+#scrapeBtn {
+    margin: 5%;
 }
 
-.notes-modal {
-    /* The Modal (background) */
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-
-  /* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .card-header {
+.card-header {
       font-size: 25px;
-  }
+      background: rgb(66, 65, 65);
+      color: white;
+      border: 3px solid white;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+        .card-ender {
+            padding-bottom: 5%;
+        }
+  
+    }
