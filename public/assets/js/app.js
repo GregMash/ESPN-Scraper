@@ -27,26 +27,43 @@ $(document).ready(() => {
     // Creates a new note
     function createNote() {
         let newNote = {};
-        let articleId = $(this).parents("div.modal-content").attr("id");
+        let articleId = $(this).attr("id");
+        newNote.title = $("#title-name").val().trim();
         newNote.body = $("#note-text").val().trim();
         $.ajax({
             method: "POST",
             url: `/articles/${articleId}`,
             data: newNote
         }).then((data) => {
-            $("#note-text").empty();
             console.log(data);
         });
     };
-
-    
-
-
 
     //==================================== MAIN PROCESS ====================================
 
     $(document).on("click", ".saver", saveArticle);
     $(document).on("click", ".deleter", deleteArticle);
-    $(document).on("click", "#note-saver", createNote);
+    $(document).on("click", ".note-saver", createNote);
+
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var recipient = button.data('whatever') // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+
+        $.ajax({
+            method: "GET",
+            url: `/articles/${recipient}`
+        }).then((data) => {
+            const { title, notes } = data;
+            $(".modal-title").text(title);
+            let notary = notes.map((note) => {
+                return `<li>${note}</li>`
+            })
+            $(".notes-list").append(notary);
+        });
+        // modal.find('.modal-title').text('New message to ' + recipient)
+        // modal.find('.modal-body input').val(recipient)
+      })
 
 });

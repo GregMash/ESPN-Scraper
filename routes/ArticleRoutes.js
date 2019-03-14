@@ -6,11 +6,25 @@ module.exports = (app) => {
     // Route for getting all articles from the db
     app.get("/", (req, res) => {
         db.Article.find({})
+            .sort({ createdAt:-1 })
+            .populate("note")
             .then((data) => {
                 const hbsObject = {
                     articles: data
                 };
                 res.render("index", hbsObject);
+            })
+            .catch((err) => {
+                res.json(err);
+            });
+    });
+
+    // Route for getting all articles from the db
+    app.get("/articles", (req, res) => {
+        db.Article.find({})
+            .populate("note")
+            .then((data) => {
+                res.json(data);
             })
             .catch((err) => {
                 res.json(err);
@@ -34,7 +48,7 @@ module.exports = (app) => {
             .then((data) => {
                 const hbsObject = {
                     articles: data
-                }; 
+                };
                 res.render("savedArticles", hbsObject);
             })
             .catch((err) => {
