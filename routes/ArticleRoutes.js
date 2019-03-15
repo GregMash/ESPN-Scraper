@@ -33,7 +33,7 @@ module.exports = (app) => {
     // Route for getting a specific article by id and populate it with associated notes
     app.get("/articles/:id", (req, res) => {
         db.Article.findOne({ _id: req.params.id })
-            .populate("note")
+            .populate("Note")
             .then((dbArticle) => {
                 res.json(dbArticle);
             })
