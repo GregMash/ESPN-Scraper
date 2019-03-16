@@ -5,6 +5,10 @@ const Schema = mongoose.Schema;
 
 // Create a new object schema for Notes
 const NoteSchema = new Schema({
+    articleId: {
+        type: String,
+        required: true
+    },
     title: {
         type: String,
         required: false

@@ -6,7 +6,7 @@ module.exports = (app) => {
     // Route for getting all articles from the db
     app.get("/", (req, res) => {
         db.Article.find({})
-            .sort({ createdAt:-1 })
+            .sort({ createdAt: -1 })
             .populate("note")
             .then((data) => {
                 const hbsObject = {
