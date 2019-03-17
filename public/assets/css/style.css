@@ -1,8 +1,10 @@
 body {
     background: rgb(37, 36, 36);
+    margin: auto;
 }
 .jumbotron {
     background-image: url("/assets/images/background.png");
+    background-size: cover;
     text-align: center;
     color: lightgray;
 }
@@ -19,11 +21,19 @@ h3 {
     font-size: 30px;
 }
 
-.article {
+section {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.article { 
+    width: 40%;
     background-color: rgb(178, 173, 189);
     border: 3px solid white;
     margin: 3%;
-    padding: 3% 2% 8% 2%;
+    padding: 3% 2% 2% 2%;
     text-align: center;
 }
 
@@ -68,10 +78,16 @@ img {
     float: left;
 }
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
         .card-ender {
             padding-bottom: 5%;
+        }
+        section {
+            margin: auto;
+            display: flex;    
+        }
+        .article {
+            width: 95%;
         }
   
     }

@@ -72,36 +72,27 @@ $(document).ready(() => {
             });
         };  
     };
-    
-
-
     //==================================== MAIN PROCESS ====================================
-
+    // Click functions being stated
     $(document).on("click", ".saver", saveArticle);
     $(document).on("click", ".deleter", deleteArticle);
     $(document).on("click", ".note-saver", createNote);
     $(document).on("click", ".note-deleter", deleteNote);
-
+    // Modal Operator
     $('.modal').on('show.bs.modal', function (event) {
         $(".notes-area").empty();
         const button = $(event.relatedTarget); // Button that triggered the modal
         const id = button.data('whatever'); // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
         $(".note-saver").attr("id", id);
         $.ajax({
             method: "GET",
             url: `/notes/${id}`
         }).then((data) => {
-            // console.log(data);
             let notesArr = [];
             for (let i = 0; i < data.length; i++) {
                 notesArr.push(displayNotes(data[i]));
             };
-            $(".notes-area").append(notesArr);
-            //$(".modal-title").text(title);
-            
+            $(".notes-area").append(notesArr);            
         });
-
     });
 });
