@@ -32,4 +32,6 @@ Or clone the repository, install the necessary packages with NPM install.
 
 -mongoDB
 
+-Mongoose
+
 -jQuery
