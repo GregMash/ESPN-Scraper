@@ -6,7 +6,7 @@ Super Mongo Scraper is an application that will grab sports articles from cbsspo
 
 ## Use The app
 
-Visit the link on heroky at: 
+Visit the link on heroku at: https://stark-cove-68040.herokuapp.com/
 
 Or clone the repository, install the necessary packages with NPM install.
 
