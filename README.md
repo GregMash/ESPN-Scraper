@@ -1,37 +1,36 @@
-# Super-Mongo-Scraper
+# Google Books React Search
 
 ## Overview
 
-Super Mongo Scraper is an application that will grab sports articles from cbssports.com and allow users to view, save, and create notes for each article.
+Super Mongo Scraper is a full stack application that will grab sports articles from cbssports.com. It then allows users to view, save, and create custom notes for each article.
 
-## Use The app
-
-Visit the link on heroku at: https://stark-cove-68040.herokuapp.com/
-
-Or clone the repository, install the necessary packages with NPM install.
-
-## Screenshots
-
+## Screenshot(s)
 ![Alt text](/public/assets/images/screenshot1 "1")
 ![Alt text](/public/assets/images/screenshot2 "2")
 ![Alt text](/public/assets/images/screenshot3 "3")
 ![Alt text](/public/assets/images/screenshot4 "4")
 ![Alt text](/public/assets/images/screenshot5 "5")
 
+## Hosted on heroku
 
-## Technologies Used
--cheerio
+[App](https://stark-cove-68040.herokuapp.com/)
 
--express
+## Technologies utilized
+ - HTML
+ - CSS
+ - Javascript
+ - Mongo Db
+ - Express JS
+ - Express-Handlebars JS
+ - Node JS
+ - Mongoose
+ - Cheerio
+ - JQuery
 
--express-handlebars
+## Build Process
 
--mongoose
+ - Visit the hosted site on heroku or...
 
--heroku
-
--mongoDB
-
--Mongoose
-
--jQuery
+ - Clone the repo
+ - Run: npm install on the root
+ - Run: npm run start
