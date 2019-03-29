@@ -5,11 +5,9 @@
 Super Mongo Scraper is a full stack application that will grab sports articles from cbssports.com. It then allows users to view, save, and create custom notes for each article.
 
 ## Screenshot(s)
-![Alt text](/public/assets/images/screenshot1 "1")
-![Alt text](/public/assets/images/screenshot2 "2")
-![Alt text](/public/assets/images/screenshot3 "3")
-![Alt text](/public/assets/images/screenshot4 "4")
-![Alt text](/public/assets/images/screenshot5 "5")
+<img width="993" alt="screenshot1" src="https://user-images.githubusercontent.com/42223683/55266373-dca62400-5239-11e9-9582-d3aa7fa0246c.png">
+<img width="992" alt="screenshot2" src="https://user-images.githubusercontent.com/42223683/55266375-dd3eba80-5239-11e9-96cd-aa92d641b310.png">
+<img width="635" alt="screenshot5" src="https://user-images.githubusercontent.com/42223683/55266377-dd3eba80-5239-11e9-82c8-d1957146eefa.png">
 
 ## Hosted on heroku
 
