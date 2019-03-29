@@ -31,4 +31,4 @@ Super Mongo Scraper is a full stack application that will grab sports articles f
 
  - Clone the repo
  - Run: npm install on the root
- - Run: npm run start
+ - Run: node server.js
